@@ -227,7 +227,6 @@ img {
     position: absolute;
     bottom: 40px;
     width: 250px;
-    
     display: flex;
     justify-content: space-between;
 }
@@ -257,29 +256,31 @@ img {
     left: 0;
     width: 0%;
     height: 100%;
+    color: white;
     background: var(--primary-color);
     z-index: -1;
     transition: .5s;
 }
 
 .home-sci a:hover::before{
+    color: white;
     width: 100%;
 }
 
 .home-sci a:nth-child(1):hover{
-    color: var(--primaryB-color);
+    color: white;
 }
 
 .home-sci a:nth-child(2):hover{
-    color: var(--primaryB-color);
+    color: white;
 }
 
 .home-sci a:nth-child(3):hover{
-    color: var(--primaryB-color);
+    color: white;
 }
 
 .home-sci a:nth-child(4):hover{
-    color: var(--primaryB-color);
+    color: white;
 }
 
 /* Mouse Scrol*/
@@ -770,6 +771,21 @@ img {
 }
 .tags .span-figma {
     border: 1px solid orangered;
+}
+.tags .span-react {
+    border: 1px solid #58C4DC;
+}
+.tags .span-app {
+    border: 1px solid rgb(171, 255, 16);
+}
+.tags .span-typescript {
+    border: 1px solid #3178C6;
+}
+.tags .span-vite{
+  border: 1px solid #B279DC;
+}
+.tags .span-sqlite{
+  border: 1px solid #003B57;
 }
 
 .buttons {

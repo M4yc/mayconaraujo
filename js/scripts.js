@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Estágio Esteio Gestão',
             date: 'Fev 2025 - (Atualmente)',
             company: 'Esteio Gestão',
-            description: 'No Esteio trabalho na parte de desenvolvimento do aplicativo para a versão 4.0 no IOS. Trabalho com React Native, TypeScript, Node.js, MySql e entre outras tecnologias.'
+            description: 'Trabalho no desenvolvimento do app Esteio 4.0 para iOS, usando React Native e TypeScript no front-end e Node.js + MySQL no back-end. Minha rotina envolve desde criar novas funcionalidades até resolver bugs e melhorar o desempenho do app, sempre tentando deixar tudo mais rápido e fácil de usar.'
         }
     };
 
