@@ -1,0 +1,26 @@
+// Base
+@use 'base/variables' as *;
+@use 'base/reset';
+@use 'base/globals';
+
+// Components
+@use 'components/header';
+@use 'components/navbar';
+@use 'components/hamburger';
+
+// Sections
+@use 'sections/overlay';
+@use 'sections/home';
+@use 'sections/about';
+@use 'sections/experience';
+@use 'sections/projects';
+@use 'sections/services';
+@use 'sections/contact';
+@use 'sections/footer';
+
+body {
+  font-family: $font-primary; // Exemplo de acesso a variável
+}
+body.menu-open {
+  overflow: hidden; // Impede scroll da página quando menu está aberto
+}

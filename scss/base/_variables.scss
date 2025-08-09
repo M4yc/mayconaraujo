@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Cores
+$primary-color: #5F07BF;
+$primaryB-color: #3C0479;
+$primaryW-color: #8438D7;
+$secondary-color: #0B07D0;
+$secondary-colorB: #03008A;
+$secondary-colorW: #403DD3;
+$red-color: #FF0000;
+$green-color: #38F299;
+$gray-color: #151515;
+$white: #ffffff;
+$black: #000000;
+
+// Fontes
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: Arial, sans-serif;
+
+:export {
+  primary-color: $primary-color;
+  secondary-color: $secondary-color;
+  secondary-colorB: $secondary-colorB;
+  secondary-colorW: $secondary-colorW;
+  red-color: $red-color;
+  green-color: $green-color;
+  gray-color: $gray-color;
+  white: $white;
+  black: $black;
+  font-primary: $font-primary;
+  font-secondary: $font-secondary;
+}

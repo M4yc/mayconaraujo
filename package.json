@@ -1,0 +1,16 @@
+{
+  "name": "mayconaraujo",
+  "version": "1.0.0",
+  "description": ":construction: Projeto em construção :construction:",
+  "main": "index.html",
+  "scripts": {
+    "sass:watch": "sass --watch scss:css",
+    "sass:build": "sass scss/main.scss css/style.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.90.0"
+  }
+}

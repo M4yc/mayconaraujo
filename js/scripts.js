@@ -88,4 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    
+    if (hamburger && navbar) {
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('change');
+            navbar.classList.toggle('active');
+            
+            // Impede a rolagem da página quando o menu está aberto
+            document.body.style.overflow = navbar.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Fechar o menu quando um link for clicado
+        document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.navbar').classList.remove('active');
+          document.querySelector('.hamburger').classList.remove('change');
+          document.body.classList.remove('menu-open');
+        });
+      });
+    }
 });

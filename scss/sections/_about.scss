@@ -1,0 +1,184 @@
+@use '../base/variables' as *;
+
+.s-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: transparent;
+  z-index: 3;
+
+  .about-container {
+    background-color: $gray-color; // Mudei de red para a variável
+    border-radius: 10px;
+    border: 1px solid #1F1F1F;
+    padding: 40px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+  }
+
+  .about-content { // Removi o &- pois não segue a convenção BEM
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    img {
+      max-width: 450px;
+      max-height: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .about-text { // Classe normal (não aninhada com &)
+    max-width: 600px;
+    flex: 1;
+    text-align: left;
+
+    h4 {
+      font-size: 20px;
+      color: $primary-color;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin: 5px 0;
+      color: $white;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 18px;
+      color: $white;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: gray;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.social-buttons {
+  padding-top: 2%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow: hidden;
+
+  a {
+    overflow: hidden;
+  }
+}
+
+.social-btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: $white;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s;
+  background-color: #111;
+  border: 2px solid #1f1f1f;
+
+  i {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    color: $primary-color;
+    transform: scale(1.1);
+    border-color: $primary-color;
+  }
+}
+
+// Responsividade
+@media (max-width: 992px) {
+  .s-about {
+    &-container {
+      padding: 30px;
+    }
+
+    &-content {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    &-text {
+      max-width: 100%;
+      
+      h2 {
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .social-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .s-about {
+    &-container {
+      padding: 20px;
+    }
+
+    &-text {
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .social-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+  }
+
+  .social-buttons {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+body {
+  background-color: $black;
+  font-family: $font-secondary;
+  overflow: hidden;
+  overflow-x: hidden;
+  background: #081b29;
+  color: $white;
+  overflow: auto;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header, .home, .s-about, .projects, 
+.s-experience, .s-projects, .s-services, 
+.s-contact, .footer {
+  position: relative;
+  z-index: 1;
+}

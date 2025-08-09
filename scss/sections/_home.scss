@@ -1,0 +1,195 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+// sections/_home.scss
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  justify-content: space-between;
+  position: relative;
+
+  &-logo {
+    position: absolute;
+    right: -10%;
+    top: 60%;
+    transform: translateY(-70%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.3;
+
+    @include respond-to('medium') {
+      display: none;
+    }
+
+    img {
+      width: 600px;
+      height: auto;
+      color: $secondary-color;
+    }
+  }
+
+  &-content {
+    max-width: 700px;
+    flex: 1;
+    text-align: left;
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.2;
+      padding-bottom: 1%;
+      @include respond-to('medium') {
+      font-size: 48px;
+    }
+    @include respond-to('small') {
+      font-size: 36px;
+    }
+    }
+
+    h3 {
+      color: $primaryW-color;
+      font-size: 28px;
+      padding-bottom: 1%;
+    }
+
+    p {
+      color: rgba($white, 0.75);
+      margin: 20px 0 40px;
+      font-size: 20px;
+      padding-bottom: 1%;
+    }
+  }
+
+  &-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid $primary-color;
+      border-radius: 50%;
+      font-size: 20px;
+      color: $primary-color;
+      text-decoration: none;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.5s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        color: $white;
+        background: $primary-color;
+        z-index: -1;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        color: $white;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// Remover mouse scroll em dispositivos móveis
+.mouse {
+  @include respond-to('medium') {
+    display: none;
+  }
+}
+
+// Componentes relacionados à home
+.btn-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary-color;
+  border: 3px solid $primary-color;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $white;
+
+    &::before {
+      transform: translateY(0);
+    }
+  }
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #eee;
+  border-radius: 60px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #eee;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+  }
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}

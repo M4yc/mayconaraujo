@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  &-track {
+    background-color: #111;
+  }
+
+  &-thumb {
+    background-color: $primary-color;
+    border-radius: 8px;
+  }
+}

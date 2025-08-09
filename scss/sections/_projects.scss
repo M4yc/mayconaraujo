@@ -1,0 +1,180 @@
+@use '../base/variables' as *;
+
+.s-projects {
+  padding: 60px 10%;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: $white;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  .project-card {
+    background-color: $gray-color;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 0px 20px rgba(73, 73, 73, 0.2);
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+
+      @media (max-width: 992px) {
+        height: 180px;
+      }
+
+      @media (max-width: 576px) {
+        height: 150px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      color: $white;
+      margin-bottom: 10px;
+
+      @media (max-width: 992px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: $white;
+      margin-bottom: 15px;
+
+      @media (max-width: 992px) {
+        font-size: 13px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .tags {
+    margin-bottom: 15px;
+
+    span {
+      display: inline-block;
+      color: $white;
+      border: 1px solid $green-color;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+
+      @media (max-width: 576px) {
+        font-size: 10px;
+      }
+
+      // Cores específicas para cada tag
+      &.span-html { border-color: rgb(255, 81, 0); }
+      &.span-css { border-color: rgb(0, 195, 255); }
+      &.span-javascript { border-color: rgb(255, 251, 0); }
+      &.span-arduino { border-color: #009297; }
+      &.span-python { border-color: #33638B; }
+      &.span-game { border-color: #ff0202; }
+      &.span-ui { border-color: $primary-color; }
+      &.span-figma { border-color: orangered; }
+      &.span-react { border-color: #58C4DC; }
+      &.span-app { border-color: rgb(171, 255, 16); }
+      &.span-typescript { border-color: #3178C6; }
+      &.span-vite { border-color: #B279DC; }
+      &.span-sqlite { border-color: #003B57; }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 4%;
+  }
+
+  .project-btn {
+    font-size: 16px;
+    color: #aaaaaa;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: $primary-color;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &:hover {
+      color: $white;
+
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    @media (max-width: 992px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 40px 5%;
+    
+    h2 {
+      font-size: 24px;
+    }
+
+    .project-card {
+      padding: 15px;
+    }
+  }
+}

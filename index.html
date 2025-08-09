@@ -21,7 +21,14 @@
             <a href="#" class="logo"><img src="./assets/image/ico/Logo_white_256.ico" alt="Logo Maycon"></a>
             <h3>Maycon Araujo</h3>
         </div>
-        <nav class="navbar">
+
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <nav class="navbar" id="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">Sobre</a>
             <a href="#services">Serviços</a>
@@ -55,8 +62,6 @@
         <div class="home-hero__mouse-scroll-cont">
             <div class="mouse"></div>
         </div>
-
-        
     </section>
 
     <section class="s-about" id="about">
@@ -118,16 +123,21 @@
     <section class="s-projects" id="projects">
         <h2>Meus Projetos</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <img src="./assets/image/png/GeradorSenha.png" alt="Projeto 1">
-                <h3>Gerador de Senhas</h3>
-                <p>Este é um Gerador de Senhas Seguras em Python com interface gráfica criada com CustomTkinter. Ele permite gerar senhas aleatórias e seguras, combinando caracteres especiais, números e letras, conforme o tamanho escolhido.</p>
+
+          <div class="project-card">
+                <img src="./assets/image/jpg/photo10.jpg" alt="Projeto 7">
+                <h3>Programa de geração de notas de serviços</h3>
+                <p>Nesse projeto estou desenvolvendo um software para geração de notas de serviços, para uma empresa local a ideia é ter uma interface intuita e personalizada para o cliente utilizando React, TypeScript, Vite e SQLite.</p>
                 <div class="tags">
-                    <span class="span-python">Python</span>
+                    <span class="span-react">React</span>
+                    <span class="span-typescript">TypeScript</span>
+                    <span class="span-vite">Vite</span>
+                    <span class="span-sqlite">SQLite</span>
                 </div>
-                <a href="https://github.com/M4yc/Password_Generator" class="project-btn">Source Code</a>
+                <a href="https://github.com/M4yc/maycosoft_redesignReR" class="project-btn">Source</a>
             </div>
-            <div class="project-card">
+
+          <div class="project-card">
                 <img src="./assets/image/jpg/photo5.jpg" alt="Projeto 2">
                 <h3>App Training Up</h3>
                 <p>Um aplicativo mobile feito para personal trainer’s que desejam otimizar o atendimento de seus alunos de forma prática. Com ele, o profissional pode mandar e enviar fichas de treino personalizadas diretamente pelo celular, mantendo uma controle organizado de todos os alunos em um único lugar.</p>
@@ -141,6 +151,29 @@
                     <a href="#" target="_blank" class="project-btn">Video</a>
                 </div>
             </div>
+
+            <div class="project-card">
+                <img src="./assets/image/png/Cripto.png" alt="Projeto 5">
+                <h3>UI Interface Crypto</h3>
+                <p>Eu desenvolvi uma interface de landing page para um site de NFTs, focando na apresentação clara das coleções, informações sobre artistas, detalhes de compra e uma área interativa para a comunidade.</p>
+                <div class="tags">
+                    <span class="span-ui">UI Design</span>
+                    <span class="span-figma">Figma</span>
+                </div>
+                <a href="https://www.behance.net/gallery/160985141/Crypto-Landing-Page" target="_blank" class="project-btn">Visualizar Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <img src="./assets/image/png/Vpixel.png" alt="Projeto 6">
+                <h3>UI App Vpixel</h3>
+                <p>O projeto Vpixel visa desenvolver uma interface para um aplicativo dedicado a jogadores de Valorant. O aplicativo tem como foco o aprendizado e compartilhamento de "Pixels", publicação de vídeos e jogadas e Chat para conversas.</p>
+                <div class="tags">
+                    <span class="span-ui">UI Design</span>
+                    <span class="span-figma">Figma</span>
+                </div>
+                <a href="https://www.behance.net/gallery/162854609/Vpixel-Ui-Case-Study" target="_blank" class="project-btn">Visualizar Projeto</a>
+            </div>
+            
             <div class="project-card">
                 <img src="./assets/image/png/Automatic.gif" alt="Projeto 3">
                 <h3>Automação de produtos</h3>
@@ -153,6 +186,17 @@
                 </div>
                 
             </div>
+
+            <div class="project-card">
+                <img src="./assets/image/png/GeradorSenha.png" alt="Projeto 1">
+                <h3>Gerador de Senhas</h3>
+                <p>Este é um Gerador de Senhas Seguras em Python com interface gráfica criada com CustomTkinter. Ele permite gerar senhas aleatórias e seguras, combinando caracteres especiais, números e letras, conforme o tamanho escolhido.</p>
+                <div class="tags">
+                    <span class="span-python">Python</span>
+                </div>
+                <a href="https://github.com/M4yc/Password_Generator" class="project-btn">Source Code</a>
+            </div>
+          
             <div class="project-card">
                 <img src="./assets/image/svg/PyGame.gif" alt="Projeto 4">
                 <h3>Snake Game</h3>
@@ -166,38 +210,7 @@
                     <a href="https://github.com/M4yc/SnakeGame" target="_blank" class="project-btn">Live Demo</a>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="./assets/image/png/Cripto.png" alt="Projeto 5">
-                <h3>UI Interface Crypto</h3>
-                <p>Eu desenvolvi uma interface de landing page para um site de NFTs, focando na apresentação clara das coleções, informações sobre artistas, detalhes de compra e uma área interativa para a comunidade.</p>
-                <div class="tags">
-                    <span class="span-ui">UI Design</span>
-                    <span class="span-figma">Figma</span>
-                </div>
-                <a href="https://www.behance.net/gallery/160985141/Crypto-Landing-Page" target="_blank" class="project-btn">Visualizar Projeto</a>
-            </div>
-            <div class="project-card">
-                <img src="./assets/image/png/Vpixel.png" alt="Projeto 6">
-                <h3>UI App Vpixel</h3>
-                <p>O projeto Vpixel visa desenvolver uma interface para um aplicativo dedicado a jogadores de Valorant. O aplicativo tem como foco o aprendizado e compartilhamento de "Pixels", publicação de vídeos e jogadas e Chat para conversas.</p>
-                <div class="tags">
-                    <span class="span-ui">UI Design</span>
-                    <span class="span-figma">Figma</span>
-                </div>
-                <a href="https://www.behance.net/gallery/162854609/Vpixel-Ui-Case-Study" target="_blank" class="project-btn">Visualizar Projeto</a>
-            </div>
-            <div class="project-card">
-                <img src="./assets/image/jpg/photo10.jpg" alt="Projeto 7">
-                <h3>Programa de geração de notas de serviços</h3>
-                <p>Nesse projeto estou desenvolvendo um software para geração de notas de serviços, para uma empresa local a ideia é ter uma interface intuita e personalizada para o cliente utilizando React, TypeScript, Vite e SQLite.</p>
-                <div class="tags">
-                    <span class="span-react">React</span>
-                    <span class="span-typescript">TypeScript</span>
-                    <span class="span-vite">Vite</span>
-                    <span class="span-sqlite">SQLite</span>
-                </div>
-                <a href="https://github.com/M4yc/maycosoft_redesignReR" class="project-btn">Source</a>
-            </div>
+
             <div class="project-card">
                 <img src="./assets/image/png/videoframe_76.png" alt="Projeto 8" href="https://drive.google.com/file/d/1WBOEVSVw4oeJFDfl3GFen957dRlHiaxJ/view?usp=sharing">
                 <h3>Rega Automática</h3>
@@ -217,6 +230,22 @@
     <section class="s-services" id="services">
         <h2>Serviços Oferecidos</h2>
         <div class="services-grid">
+          <div class="service-card">
+                <div class="icon">
+                    <i class='bx bx-globe' ></i>
+                </div>
+                <h3>Desenvolvimento de Sites e E-commerce</h3>
+                <p>Criação de sites e lojas virtuais modernos, otimizados para conversões e experiência do usuário.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                  <i class='bx  bx-code-alt'></i> 
+                </div>
+                <h3>Desenvolvimento de Softwares</h3>
+                <p>Criação de aplicações personalizadas para atender às suas necessidades específicas.</p>
+            </div>
+
             <div class="service-card">
                 <div class="icon">
                     <i class='bx bx-cog' ></i>
@@ -224,13 +253,7 @@
                 <h3>Montagem e Manutenção de Computadores</h3>
                 <p>Configuração e reparos para garantir que seu computador funcione perfeitamente.</p>
             </div>
-            <div class="service-card">
-                <div class="icon">
-                    <i class='bx bx-globe' ></i>
-                </div>
-                <h3>Desenvolvimento de Sites e E-commerce</h3>
-                <p>Criação de sites e lojas virtuais modernos, otimizados para conversões e experiência do usuário.</p>
-            </div>
+            
             <div class="service-card">
                 <div class="icon">
                     <i class='bx bxl-sketch' ></i>
@@ -252,13 +275,7 @@
                 <h3>Automações Residenciais</h3>
                 <p>Transformação de ambientes domésticos em espaços inteligentes com tecnologia automatizada.</p>
             </div>
-            <div class="service-card">
-                <div class="icon">
-                  <i class='bx  bx-code-alt'></i> 
-                </div>
-                <h3>Desenvolvimento de Softwares</h3>
-                <p>Criação de aplicações personalizadas para atender às suas necessidades específicas.</p>
-            </div>
+            
         </div>
     </section>
     

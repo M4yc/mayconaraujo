@@ -1,0 +1,35 @@
+@use '../base/variables' as *;
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 21px;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: $white;
+    transition: all 0.3s ease;
+  }
+
+  &.change {
+    .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+}

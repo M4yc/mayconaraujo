@@ -1,0 +1,111 @@
+@use '../base/variables' as *;
+
+.s-contact {
+  background: linear-gradient(to right, rgba($primaryB-color, 0.8), rgba($primaryW-color, 0.8)), url('../assets/image/svg/common-bg.svg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 10%;
+  color: $white;
+  text-align: center;
+
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    background: $white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: $gray-color;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      padding: 30px;
+    }
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 30px;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      background: transparent;
+      color: $gray-color;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      background: $white;
+      padding: 0 5px;
+      color: #999;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label,
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 10px;
+      color: $primary-color;
+      font-size: 14px;
+      background: $white;
+    }
+  }
+
+  .input-style {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  .btn-submit {
+    background: $primary-color;
+    color: $white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: $primaryW-color;
+    }
+  }
+}
